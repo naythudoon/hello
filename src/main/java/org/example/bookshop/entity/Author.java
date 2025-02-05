@@ -4,9 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.OneToMany;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
@@ -14,9 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
 @NoArgsConstructor
-
+@Data
 public class Author extends IdClass{
 
     private String authorName;
@@ -42,4 +39,6 @@ public class Author extends IdClass{
         book.setAuthor(this);
         books.add(book);
     }
+
+
 }
