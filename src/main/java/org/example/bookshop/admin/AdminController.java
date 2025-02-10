@@ -35,7 +35,6 @@ public class AdminController {
         if (result.hasErrors()) {
             return "admin/books";
         }
-
         adminService.saveBook(book,book.getCategory().getId(),book.getAuthor().getId());
         return "redirect:/admin/books";
     }
